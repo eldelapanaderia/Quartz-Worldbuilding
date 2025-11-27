@@ -1,6 +1,6 @@
 @use "./base.scss";
 
 // put your custom CSS here!
-body.dark #quartz-body ul.toc-content.overflow > li > a {
+body.dark #quartz-body ul.toc-content li > a {
     color: #dadada !important;
 }
