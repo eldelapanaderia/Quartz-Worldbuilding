@@ -1,10 +1,7 @@
 @use "./base.scss"; 
 
-body {
-    color:#dadada;
-}
 // put your custom CSS here!
-body.dark div#quartz-body div.toc.desktop-only ul.toc-content.overflow a {
+div.toc.desktop-only ul.toc-content.overflow a {
     /* Usamos el color deseado */
     color: #dadada; 
 }
