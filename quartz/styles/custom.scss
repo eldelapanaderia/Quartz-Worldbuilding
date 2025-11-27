@@ -1,3 +1,6 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+.dark .toc-content a {
+    color: #dadada; /* Usa un color muy claro para los enlaces (darkgray en modo oscuro) */
+}
