@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "Quartz-Worlbuilding",
+    baseUrl: "eldelapanaderia.github.io/Quartz-Worlbuilding",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -90,7 +90,6 @@ const config: QuartzConfig = {
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
-      Plugin.RemoveDrafts()
     ],
   },
 }
