@@ -1,6 +1,8 @@
 @use "./base.scss";
 
 // put your custom CSS here!
-.dark ul.toc-content.overflow > li > a {
-    color: #dadada !important; 
+body.dark ul.toc-content.overflow > li > a {
+    /* ➡️ Añadimos el 'body' para aumentar la especificidad al máximo */
+    color: #dadada !important;
+    opacity: 1 !important;
 }
