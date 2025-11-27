@@ -4,8 +4,5 @@
 body.dark div#quartz-body ul.toc-content.overflow > li > a {
     /* Usamos el ID de la página y el selector de cuerpo del tema 
        para asegurarnos que esta regla gana en el modo oscuro. */
-    color: #dadada; 
-    
-    /* CRÍTICO: Aseguramos que la opacidad no atenúa el color */
-    opacity: 1; 
+    color: #dadada !important; 
 }
