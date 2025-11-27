@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "eldelapanaderia.github.io/Quartz-Worlbuilding",
+    baseUrl: "Quartz-Worlbuilding",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
