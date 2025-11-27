@@ -39,7 +39,6 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer(),
-    Component.Infobox(),
   ],
   right: [
     Component.Graph(),
