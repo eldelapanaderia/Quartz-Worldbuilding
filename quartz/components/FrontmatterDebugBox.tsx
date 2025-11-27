@@ -17,18 +17,18 @@ const FrontmatterDebugBox: QuartzComponent = ({ fileData }: QuartzComponentProps
 
   // 2. Convertir el objeto de frontmatter a una cadena JSON legible
   // El valor null se usa como 'replacer' y el 2 es para un indentado de 2 espacios (pretty print)
-  const frontmatterJson = JSON.stringify(frontmatter, null, 2)
+  const FrontmatterDebugBox: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
 
   // 3. Renderizar en el DOM
   return (
-    <div className="frontmatter-debug-box">
+    <div className={`frontmatter-debug-box ${displayClass ?? ""}`}>
       <h3>Frontmatter (Caja Wiki de Depuración)</h3>
       <p>**Título de la Nota:** {fileData.slug}</p>
       
       {/* <pre> se usa para mantener el formato y espaciado de JSON */}
       <pre>
         <code>
-          {frontmatterJson}
+          {/* ... */}
         </code>
       </pre>
     </div>
@@ -37,4 +37,22 @@ const FrontmatterDebugBox: QuartzComponent = ({ fileData }: QuartzComponentProps
 
 // 4. Exportar el componente
 FrontmatterDebugBox.displayName = "FrontmatterDebugBox"
-export default (() => FrontmatterDebugBox) satisfies QuartzComponent
+export default (() => {
+  // 1. Opcional: Definir las opciones o configuración (en este caso, no hay)
+
+  // 2. Definir el componente React (FrontmatterDebugBox en este caso)
+
+  // 3. Añadir propiedades estáticas (CSS, scripts)
+  FrontmatterDebugBox.css = `
+    /* Puedes dejar este string vacío si no tienes estilos */
+    /* O puedes incluir tus estilos SASS aquí si los importaste */
+    .frontmatter-debug-box {
+      /* Añade un estilo básico para que la propiedad exista */
+      border: 1px solid var(--lightgray);
+      padding: 1rem;
+    }
+  `
+
+  // 4. Devolver la función de componente
+  return FrontmatterDebugBox
+}) satisfies QuartzComponentConstructor
