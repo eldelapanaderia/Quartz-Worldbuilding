@@ -7,15 +7,8 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [],
   footer: Component.Footer(),
-  //footer: Component.Footer({
-  //  links: {
-  //    GitHub: "https://github.com/jackyzha0/quartz",
-  //    "Discord Community": "https://discord.gg/cRFFHYye7t",
-  //  },
-  //}),
 }
-
-// components for pages that display a single page (e.g. a single note)
+/* Original code
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
@@ -47,6 +40,28 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+  ],
+}
+*/
+
+// components for pages that display a single page (e.g. a single note)
+export const defaultContentPageLayout: PageLayout = {
+  beforeBody: [
+    Component.ConditionalRender({
+      component: Component.Breadcrumbs(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+    Component.TagList(),
+  ],
+  left: [
+    //Component.PageTitle(),
+  ],
+  right: [
+    Component.Search(),
+    Component.DesktopOnly(Component.TableOfContents()),
+    //Component.Backlinks(),
   ],
 }
 
