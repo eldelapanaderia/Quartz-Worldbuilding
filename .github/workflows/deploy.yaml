@@ -27,13 +27,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      #- name: Install Dependencies
-      #  run: npm ci
-      - name: Instalar y limpiar dependencias
-        run: |
-          rm -rf node_modules
-          npm cache clean --force
-          npm ci
+      - name: Install Dependencies
+        run: npm ci
       - name: Fetch Quartz Theme
         run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME 
       - name: Build Quartz
