@@ -2,5 +2,10 @@
 
 // put your custom CSS here!
 .dark .toc-content a {
-    color: #dadada; /* Usa un color muy claro para los enlaces (darkgray en modo oscuro) */
+    color: #dadada !important; /* Usa un color muy claro para los enlaces (darkgray en modo oscuro) */
+}
+
+.dark ul.toc-content {
+    /* Define el color base para la lista. */
+    color: #dadada !important;
 }
