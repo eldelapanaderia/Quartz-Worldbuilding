@@ -1,6 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
-import InfoboxComponent from ".quartz/components/Infobox"
+import InfoboxComponent from ".quartz/components/Infobox.tsx"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
