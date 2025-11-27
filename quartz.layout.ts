@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import Infobox from "./components/Infobox"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -40,7 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer(),
-    Component.Infobox(),
+    Infobox(),
   ],
   right: [
     Component.Graph(),
