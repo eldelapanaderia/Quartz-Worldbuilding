@@ -1,55 +1,62 @@
 // quartz/components/FrontmatterDebugBox.tsx
 
 import React from "react"
-import { QuartzComponent, QuartzComponentProps } from "./types"
+// Importamos QuartzComponentConstructor para la exportación
+import { QuartzComponent, QuartzComponentProps, QuartzComponentConstructor } from "./types"
 
-// El componente se define como una QuartzComponent sin opciones de configuración adicionales (Options = {})
-const FrontmatterDebugBox: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
+// El componente se define SÓLO UNA VEZ
+const FrontmatterDebugBox: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
   
-  // 1. Acceder al Front Matter
-  // El front matter de la nota actual (archivo .md) está en fileData.frontmatter
+  // 1. Acceder y convertir el Front Matter
   const frontmatter = fileData.frontmatter
 
-  // Comprobación de si hay frontmatter para evitar errores
   if (!frontmatter) {
     return null 
   }
 
-  // 2. Convertir el objeto de frontmatter a una cadena JSON legible
-  // El valor null se usa como 'replacer' y el 2 es para un indentado de 2 espacios (pretty print)
-  const FrontmatterDebugBox: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
+  // Convertir el objeto de frontmatter a una cadena JSON legible
+  // USAMOS LA VARIABLE frontmatterJson
+  const frontmatterJson = JSON.stringify(frontmatter, null, 2)
 
-  // 3. Renderizar en el DOM
+  // 2. Renderizar en el DOM
   return (
     <div className={`frontmatter-debug-box ${displayClass ?? ""}`}>
       <h3>Frontmatter (Caja Wiki de Depuración)</h3>
-      <p>**Título de la Nota:** {fileData.slug}</p>
+      {/* fileData.slug es el nombre de la ruta/archivo */}
+      <p><strong>Ruta de la Nota:</strong> {fileData.slug}</p>
       
       {/* <pre> se usa para mantener el formato y espaciado de JSON */}
       <pre>
         <code>
-          {/* ... */}
+          {frontmatterJson} {/* ⬅️ Renderizamos el JSON aquí */}
         </code>
       </pre>
     </div>
   )
 }
 
-// 4. Exportar el componente
+// -------------------------------------------------------------------
+// 3. Exportación Final (Envuelve el componente, añade CSS estático)
+// -------------------------------------------------------------------
+
 FrontmatterDebugBox.displayName = "FrontmatterDebugBox"
+
 export default (() => {
-  // 1. Opcional: Definir las opciones o configuración (en este caso, no hay)
-
-  // 2. Definir el componente React (FrontmatterDebugBox en este caso)
-
-  // 3. Añadir propiedades estáticas (CSS, scripts)
+  
+  // 3. Añadir propiedades estáticas (CSS, scripts) al componente DEFINIDO
+  // Hacemos que la propiedad .css exista para evitar el error de desestructuración
   FrontmatterDebugBox.css = `
-    /* Puedes dejar este string vacío si no tienes estilos */
-    /* O puedes incluir tus estilos SASS aquí si los importaste */
     .frontmatter-debug-box {
-      /* Añade un estilo básico para que la propiedad exista */
       border: 1px solid var(--lightgray);
       padding: 1rem;
+      /* Ajustamos el color para que destaque */
+      background-color: var(--lightgray); 
+    }
+    .frontmatter-debug-box pre {
+      background-color: var(--light);
+      border: 1px dashed var(--gray);
+      padding: 10px;
+      overflow-x: auto; 
     }
   `
 
