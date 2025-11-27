@@ -1,8 +1,6 @@
 @use "./base.scss";
 
 // put your custom CSS here!
-body.dark div#quartz-body ul.toc-content.overflow > li > a {
-    /* Usamos el ID de la página y el selector de cuerpo del tema 
-       para asegurarnos que esta regla gana en el modo oscuro. */
-    color: #dadada !important; 
+body.dark #quartz-body ul.toc-content.overflow > li > a {
+    color: #dadada !important;
 }
