@@ -1,8 +1,39 @@
 @use "./base.scss"; 
 @use "./themes/black/_index.scss";
+
 // put your custom CSS here!
+
+/* Color texto TOC */
 div.toc.desktop-only ul.toc-content.overflow a {
-    /* Usamos el color deseado */
     color: #dadada; 
     opacity: 1;
+}
+
+/* Ocultar la barra izquierda si está EXACTAMENTE vacía */
+div.sidebar.left:empty{
+    width: 0;
+    border-right: 0 !important;
+    padding: 0 !important;
+}
+
+/* Recolocamos el grid y la posición del texto para rellenar la pagina después de ocultar la left sidebar */
+@media all and (min-width: 1024px) {
+
+    body .page:has(div.sidebar.left:empty) > #quartz-body,
+    body .list:has(div.sidebar.left:empty) > #quartz-body {
+        
+        grid-template: 
+            "grid-sidebar-left grid-header grid-sidebar-right"
+            "grid-sidebar-left grid-center grid-sidebar-right"
+            "grid-sidebar-left grid-footer grid-sidebar-right"
+            / 0px 1fr 320px !important; 
+    }
+    body .page:has(div.sidebar.left:empty) article {        
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important; 
+    }
+    body .page:has(div.sidebar.left:empty) div.popover-hint {
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important; 
+    }
 }
