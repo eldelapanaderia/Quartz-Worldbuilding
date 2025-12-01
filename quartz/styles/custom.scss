@@ -24,6 +24,10 @@ hr {
     padding-top: 3rem !important;
 }
 
+body .page > div#quartz-body div.sidebar.left {
+    padding-top: 3rem !important;
+}
+
 @media all and ($desktop) {
 
     /* Esconder sidebar right si esta vacía */
