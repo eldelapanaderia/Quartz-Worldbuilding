@@ -1,5 +1,6 @@
 @use "./base.scss"; 
 @use "./themes/black/_index.scss";
+@use "./variables.scss" as *;
 
 // put your custom CSS here!
 
@@ -9,35 +10,47 @@ div.toc.desktop-only ul.toc-content.overflow a {
     opacity: 1;
 }
 
-/* Ocultar la barra izquierda si está EXACTAMENTE vacía */
-div.sidebar.left:empty{
-    width: 0;
-    border-right: 0 !important;
-    padding: 0 !important;
-}
-
-/* Recolocamos el grid y la posición del texto para rellenar la pagina después de ocultar la left sidebar */
-@media all and (min-width: 1024px) {
-
-    body .page:has(div.sidebar.left:empty) > #quartz-body,
-    body .list:has(div.sidebar.left:empty) > #quartz-body {
-        
-        grid-template: 
-            "grid-sidebar-left grid-header grid-sidebar-right"
-            "grid-sidebar-left grid-center grid-sidebar-right"
-            "grid-sidebar-left grid-footer grid-sidebar-right"
-            / 0px 1fr 320px !important; 
-    }
-    body .page:has(div.sidebar.left:empty) article {        
-        padding-left: 2.5rem !important;
-        padding-right: 2.5rem !important; 
-    }
-    body .page:has(div.sidebar.left:empty) div.popover-hint {
-        padding-left: 2.5rem !important;
-        padding-right: 2.5rem !important; 
-    }
-}
-
 hr {
   margin-top: 2.5rem !important;
+}
+
+// Opcion de que se scrolleen las sidebar junto con el center
+// .page > #quartz-body .sidebar {
+//     position: relative !important;
+// }
+
+.page > #quartz-body .sidebar.left {
+    //max-width: 70%; // Ajustar maximo de tamaño
+    padding-right: 0; // Juntar scroll bar a right border
+    padding-top: 3rem !important;
+}
+
+/* Esconder sidebar right si esta vacía */
+
+
+
+@media all and ($desktop) {
+
+    div.sidebar.right:empty {
+    width: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important; 
+    padding: 0 !important;
+    margin: 0 !important;
+}
+    /* ... Tus reglas de ocultación de sidebar right:empty (deben permanecer) ... */
+
+    /* 🔑 REGLA CRÍTICA: Recalcular el ancho de .center compensando el porcentaje de la barra derecha */
+    body .page:has(div.sidebar.right:empty) > #quartz-body div.center,
+    body .list:has(div.sidebar.right:empty) > #quartz-body div.center {
+        
+        /* Fórmula: 
+           Ancho original (100% - 3rem) 
+           + Compensación (Porcentaje de la sidebar right) 
+        */
+        min-width: calc(100%  + var(--sidebar-right-toggle-inner-width-open)) !important;
+        max-width: calc(100% + var(--sidebar-right-toggle-inner-width-open)) !important;
+        
+        
+    }
 }
