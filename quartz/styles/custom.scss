@@ -48,3 +48,10 @@ body .page > div#quartz-body div.sidebar.left {
         
     }
 }
+
+@media all and ($mobile) and ($tablet) {
+    div.search{
+        width: 100%;
+        max-width: unset;
+    }
+}
