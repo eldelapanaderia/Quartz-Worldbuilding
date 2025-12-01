@@ -57,7 +57,6 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
         {
@@ -67,7 +66,6 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.MobileOnly(Component.Explorer()),
     //Component.Backlinks(),
   ],
   right: [],
