@@ -40,11 +40,8 @@ body .page > div#quartz-body div.sidebar.left {
    
     body .page:has(div.sidebar.right:empty) > #quartz-body div.center,
     body .list:has(div.sidebar.right:empty) > #quartz-body div.center {
-        
         min-width: calc(100%  + var(--sidebar-right-toggle-inner-width-open)) !important;
-        max-width: calc(100% + var(--sidebar-right-toggle-inner-width-open)) !important;
-        
-        
+        max-width: calc(100% + var(--sidebar-right-toggle-inner-width-open)) !important;        
     }
 }
 
@@ -59,10 +56,8 @@ body .page > div#quartz-body div.sidebar.left {
         top: 0 !important;
         background-color: #000 !important; 
         z-index: 10 !important;
-        box-shadow: 0 0 0 #000 !important;
     }
 }
-
 
 @media all and ($mobile) {
     body .page > #quartz-body div.sidebar.left .flex-component,
@@ -75,6 +70,5 @@ body .page > div#quartz-body div.sidebar.left {
         top: 0 !important;
         background-color: #000 !important; 
         z-index: 10 !important;
-        box-shadow: 0 0 0 #000 !important;
     }
 }
