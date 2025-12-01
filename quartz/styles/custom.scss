@@ -29,9 +29,6 @@ body .page > div#quartz-body div.sidebar.left {
 }
 
 @media all and ($desktop) {
-    body .page > #quartz-body div.sidebar.left{
-         position: sticky !important;
-    }
     /* Esconder sidebar right si esta vacía */
     div.sidebar.right:empty {
     width: 0 !important;
@@ -58,7 +55,10 @@ body .page > div#quartz-body div.sidebar.left {
         max-width: 100% !important;
     }
     body .page > #quartz-body div.sidebar.left{
-         position: sticky !important;
+        position: sticky !important;
+        top: 0 !important;
+        background-color: #000 !important; 
+        z-index: 10 !important;
     }
 }
 
@@ -70,6 +70,9 @@ body .page > div#quartz-body div.sidebar.left {
         max-width: 100% !important;
     }
     body .page > #quartz-body div.sidebar.left{
-         position: sticky !important;
+        position: sticky !important;
+        top: 0 !important;
+        background-color: #000 !important; 
+        z-index: 10 !important;
     }
 }
