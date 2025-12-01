@@ -50,7 +50,8 @@ body .page > div#quartz-body div.sidebar.left {
 }
 
 @media all and ($mobile) and ($tablet) {
-    div.search{
+    div.sidebar.left.flex-component,
+    div.sidebar.left.search{
         width: 100% !important;
         max-width: unset !important;
     }
