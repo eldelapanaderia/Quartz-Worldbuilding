@@ -49,10 +49,19 @@ body .page > div#quartz-body div.sidebar.left {
     }
 }
 
-@media all and ($mobile) and ($tablet) {
-    div.sidebar.left.flex-component,
-    div.sidebar.left.search{
+@media all and ($tablet) {
+    body .page > #quartz-body div.sidebar.left .flex-component,
+    body .page > #quartz-body div.sidebar.left .search {
         width: 100% !important;
-        max-width: unset !important;
+        max-width: 100% !important;
+    }
+}
+
+
+@media all and ($mobile) {
+    body .page > #quartz-body div.sidebar.left .flex-component,
+    body .page > #quartz-body div.sidebar.left .search {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
