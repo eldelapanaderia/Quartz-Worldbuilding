@@ -55,6 +55,9 @@ body .page > div#quartz-body div.sidebar.left {
         width: 100% !important;
         max-width: 100% !important;
     }
+    body .page > #quartz-body div.sidebar.left .search {
+        position: sticky !important;
+    }
 }
 
 
@@ -63,5 +66,8 @@ body .page > div#quartz-body div.sidebar.left {
     body .page > #quartz-body div.sidebar.left .search {
         width: 100% !important;
         max-width: 100% !important;
+    }
+    body .page > #quartz-body div.sidebar.left .search {
+        position: sticky !important;
     }
 }
