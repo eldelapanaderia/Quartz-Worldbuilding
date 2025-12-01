@@ -67,7 +67,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.TableOfContents(),
+    Component.MobileOnly(Component.Explorer()),
     //Component.Backlinks(),
   ],
   right: [],
