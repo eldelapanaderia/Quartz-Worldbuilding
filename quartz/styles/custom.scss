@@ -22,15 +22,13 @@ hr {
 .page > #quartz-body .sidebar.left {
     //max-width: 70%; // Ajustar maximo de tamaño
     padding-right: 0; // Juntar scroll bar a right border
-    padding-top: 3rem !important;
+    padding-top: 1rem !important;
 }
-
-/* Esconder sidebar right si esta vacía */
-
 
 
 @media all and ($desktop) {
 
+    /* Esconder sidebar right si esta vacía */
     div.sidebar.right:empty {
     width: 0 !important;
     border-left: 0 !important;
