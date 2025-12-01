@@ -20,11 +20,9 @@ hr {
 // }
 
 .page > #quartz-body .sidebar.left {
-    //max-width: 70%; // Ajustar maximo de tamaño
     padding-right: 0; // Juntar scroll bar a right border
-    padding-top: 1rem !important;
+    padding-top: 3rem !important;
 }
-
 
 @media all and ($desktop) {
 
@@ -36,16 +34,10 @@ hr {
     padding: 0 !important;
     margin: 0 !important;
 }
-    /* ... Tus reglas de ocultación de sidebar right:empty (deben permanecer) ... */
-
-    /* 🔑 REGLA CRÍTICA: Recalcular el ancho de .center compensando el porcentaje de la barra derecha */
+   
     body .page:has(div.sidebar.right:empty) > #quartz-body div.center,
     body .list:has(div.sidebar.right:empty) > #quartz-body div.center {
         
-        /* Fórmula: 
-           Ancho original (100% - 3rem) 
-           + Compensación (Porcentaje de la sidebar right) 
-        */
         min-width: calc(100%  + var(--sidebar-right-toggle-inner-width-open)) !important;
         max-width: calc(100% + var(--sidebar-right-toggle-inner-width-open)) !important;
         
