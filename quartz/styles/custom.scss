@@ -1,5 +1,5 @@
 @use "./base.scss"; 
-//@use "./themes/black/_index.scss";
+@use "./themes/black/_index.scss";
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
@@ -18,6 +18,21 @@ hr {
 // .page > #quartz-body .sidebar {
 //     position: relative !important;
 // }
+
+body .page > #quartz-body h1.article-title{
+    font-size:2.5rem !important;
+}
+
+article.popover-hint{
+    margin-left: 1rem;
+}
+body .page > #quartz-body .page-listing{
+    margin-left: 1rem;
+}
+
+body .page > #quartz-body .page-header{
+    margin: 1rem;
+}
 
 .page > #quartz-body .sidebar.left {
     padding-right: 0; // Juntar scroll bar a right border
@@ -43,13 +58,17 @@ body .page > div#quartz-body div.sidebar.left {
         min-width: calc(100%  + var(--sidebar-right-toggle-inner-width-open)) !important;
         max-width: calc(100% + var(--sidebar-right-toggle-inner-width-open)) !important;        
     }
+    body .page > #quartz-body div.sidebar.left .search {
+        width: 90% !important;
+        max-width: 90% !important;
+    }
 }
 
 @media all and ($tablet) {
     body .page > #quartz-body div.sidebar.left .flex-component,
     body .page > #quartz-body div.sidebar.left .search {
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 96% !important;
+        max-width: 96% !important;
     }
     body .page > #quartz-body div.sidebar.left{
         position: sticky !important;
@@ -70,5 +89,8 @@ body .page > div#quartz-body div.sidebar.left {
         top: 0 !important;
         background-color: #000 !important; 
         z-index: 10 !important;
+    }
+    body .page > #quartz-body div.explorer{
+        margin-top: 1rem;
     }
 }

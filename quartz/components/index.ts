@@ -25,6 +25,7 @@ import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import Infobox from "./Infobox"
 import NavLinks from "./NavLinks"
+import LinksHeader from "./LinksHeader"
 
 export {
   ArticleTitle,
@@ -54,4 +55,5 @@ export {
   ConditionalRender,
   Infobox,
   NavLinks,
+  LinksHeader,
 }
