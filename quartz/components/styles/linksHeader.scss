@@ -1,25 +1,26 @@
 @use "../../styles/variables.scss" as *;
 
 header {
-  display: block;
-  margin-top: 1rem;
-// position: fixed;
-//     top: 0;
-//     z-index: 100;
+    display: block;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    width: auto !important; 
+    margin-top: 0rem !important;
 }
 
 #links-header-container{
-    
+    margin-top: 1rem !important;
 }
 
 #links-header {
   font-size: 1.2em;
-  margin: 0 0.2em;
+  margin: 0;
   display: flex;
   flex-flow: row wrap;
+//   justify-content: space-between;
   justify-content: space-evenly;
   align-content: space-between;
-/* remove flex-box on MMW LinksHeader */
 
   svg {
     height: 1em;
@@ -32,8 +33,6 @@ header {
     padding: 10px 15px;
     box-sizing: border-box;
     color: #dadada;
-    /*width: 20%;*/
-/*remove flex-box on MMW LinksHeader */
   }  
 }
 
@@ -42,20 +41,92 @@ header {
     margin: 1rem 0;
   }
 }
-
-@media screen and ($mobile) {
-  #links-header {
-    display: flex;
-    // overflow: scroll;
-    // white-space: nowrap;
-    justify-content: center;
-    flex-wrap: wrap; 
-    align-items: center;
-  
-    & a.links-header-item {
-      box-sizing: unset;
-      width: unset;
-      
+@media screen and ($desktop) {
+    header{
+        margin-bottom: 0 !important;
+        background-color: #000000 !important;
     }
-  }
+    div.sidebar.left #links-header-container{
+        display: none !important;
+        visibility: hidden;
+        background-color: transparent;
+
+    }
+    #links-header-container{
+        border-bottom: 1px solid rgb(54, 54, 54) !important;
+    }
+    header {
+        position: fixed !important; 
+        top: 0 !important; 
+        width: 100% !important; 
+        box-sizing: border-box !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        left: 0 !important;
+        right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+@media screen and ($tablet) {
+    header{
+        margin-bottom: 0 !important;
+        background-color: #000000 !important;
+    }
+    div.sidebar.left #links-header-container{
+        display: none !important;
+        visibility: hidden;
+        background-color: transparent;
+
+    }
+    #links-header-container{
+        border-bottom: 1px solid rgb(54, 54, 54) !important;
+    }
+    header {
+        position: fixed !important; 
+        top: 0 !important; 
+        width: 100% !important; 
+        box-sizing: border-box !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        left: 0 !important;
+        right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+@media screen and ($mobile) {
+    header #links-header-container {
+        display: none !important;
+        visibility: hidden;
+        background-color: transparent;
+    }
+
+    #links-header {
+        display: flex;
+        
+        // Centra los elementos hijos horizontalmente
+        justify-content: center; 
+        
+        flex-wrap: wrap; 
+        align-items: center;
+    
+        & a.links-header-item {
+        // Usar display: block para que Flexbox tenga control total sobre ellos
+        display: block; 
+        
+        // Mantén el padding para que sigan siendo botones clicables
+        padding: 10px 15px; 
+        
+        // Si quieres que solo se centren en el contenedor, quita esto:
+        // width: unset; 
+        // box-sizing: unset;
+        }
+    }
+    #links-header-container{
+        margin-bottom: 0.5rem;
+    }
+    div.sidebar.left{
+        border-bottom: 1px solid rgb(54, 54, 54) !important;
+    }
 }
