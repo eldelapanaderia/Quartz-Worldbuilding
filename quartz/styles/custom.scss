@@ -1,8 +1,10 @@
 @use "./base.scss"; 
-//@use "./themes/black/_index.scss";
+@use "./themes/black/_index.scss";
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+
 
 /* Color texto TOC */
 div.toc.desktop-only ul.toc-content.overflow a {
@@ -12,6 +14,8 @@ div.toc.desktop-only ul.toc-content.overflow a {
 
 hr {
   margin-top: 2.5rem !important;
+  border: 1px solid rgb(54, 54, 54);
+  height: 0;
 }
 
 // Opcion de que se scrolleen las sidebar junto con el center
@@ -99,5 +103,9 @@ body .page > #quartz-body .page-listing{
         width:90%;
         max-width: 90%;
         margin: unset;
+    }
+    
+    .explorer[aria-expanded="false"] {
+        display: none; 
     }
 }
