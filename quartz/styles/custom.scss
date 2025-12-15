@@ -4,10 +4,6 @@
 
 // put your custom CSS here!
 
-div.content.centered{
-    padding-right: 1rem;
-}
-
 /* Color texto TOC */
 div.toc.desktop-only ul.toc-content.overflow a {
     color: #dadada; 
@@ -103,8 +99,5 @@ body .page > #quartz-body .page-listing{
         width:90%;
         max-width: 90%;
         margin: unset;
-    }
-    body .theme-dark.markdown-preview-view.vsc-initialized{
-        width:100%;
     }
 }
