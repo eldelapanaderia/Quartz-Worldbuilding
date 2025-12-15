@@ -96,6 +96,14 @@ header {
     }
 }
 @media screen and ($mobile) {
+    body .page > div#quartz-body div.sidebar.left.hide-sidebar {
+        transform: translateY(-100%); 
+        transition: transform 0.5s ease-out; 
+    }
+    body .page > div#quartz-body div.sidebar.left {
+        transition: transform 0.5s ease-out; 
+    }
+
     header #links-header-container {
         display: none !important;
         visibility: hidden;
@@ -104,23 +112,14 @@ header {
 
     #links-header {
         display: flex;
-        
-        // Centra los elementos hijos horizontalmente
         justify-content: center; 
-        
+        gap:0 15px;
         flex-wrap: wrap; 
         align-items: center;
     
         & a.links-header-item {
-        // Usar display: block para que Flexbox tenga control total sobre ellos
         display: block; 
-        
-        // Mantén el padding para que sigan siendo botones clicables
         padding: 10px 15px; 
-        
-        // Si quieres que solo se centren en el contenedor, quita esto:
-        // width: unset; 
-        // box-sizing: unset;
         }
     }
     #links-header-container{
