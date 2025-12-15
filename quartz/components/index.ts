@@ -26,6 +26,7 @@ import ConditionalRender from "./ConditionalRender"
 import Infobox from "./Infobox"
 import NavLinks from "./NavLinks"
 import LinksHeader from "./LinksHeader"
+import SmartSidebar from "./SmartSidebar"
 
 export {
   ArticleTitle,
@@ -56,4 +57,5 @@ export {
   Infobox,
   NavLinks,
   LinksHeader,
+  SmartSidebar,
 }
