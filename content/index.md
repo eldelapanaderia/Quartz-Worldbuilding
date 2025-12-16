@@ -1,5 +1,4 @@
 ---
 title: Worlds Home Page
-alias: 
-  - "/Worlds/Firmamento/Ideas"
+redirect: "/Worlds/Firmamento/Ideas"
 ---
