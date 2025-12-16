@@ -1,5 +1,5 @@
 ---
 title: Worlds Home Page
 alias: 
-  - "/Worlds/Firmamento/"
+  - "/Worlds/Firmamento/Ideas"
 ---
