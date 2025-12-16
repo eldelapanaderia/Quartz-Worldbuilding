@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-01-12T22:15:36.459+01:00","modified":"2025-12-01T18:34:44.928+01:00","published":"2025-12-01T18:34:44.928+01:00","cssclasses":"","dg-publish":true,"dg-pinned":true}
+{"publish":true,"aliases":" /index","title":"Ideas","created":"2025-01-12T22:15:36.459+01:00","modified":"2025-12-16T21:56:22.995+01:00","published":"2025-12-16T21:56:22.995+01:00","cssclasses":"","dg-publish":true,"dg-pinned":true,"alias":["/index"]}
 ---
 
 # *Protagonista*
