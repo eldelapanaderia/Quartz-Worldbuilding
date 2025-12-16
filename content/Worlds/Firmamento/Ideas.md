@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-01-12T22:15:36.459+01:00","modified":"2025-11-27T00:57:56.785+01:00","published":"2025-11-27T00:57:56.785+01:00","cssclasses":"","dg-publish":true,"dg-pinned":true}
+{"publish":true,"created":"2025-01-12T22:15:36.459+01:00","modified":"2025-12-01T18:34:44.928+01:00","published":"2025-12-01T18:34:44.928+01:00","cssclasses":"","dg-publish":true,"dg-pinned":true}
 ---
 
 # *Protagonista*
@@ -1083,3 +1083,5 @@ Seria buena idea plantear la idea de que existen venenos lentos que matan en x d
 # Corrientes marinas y estratos mar de Nero
 Estaria interesante que hubiera corriente "marinas" que usaran los animales para moverse en el aire pero en cada uno de los [[Worlds/Firmamento/Notes/Mundos]] (es decir viajar entre Islas). 
 Luego de la mano de eso que haya capas o estratos diferenciados por densidad de Nero lo que permite  a unas u otras especies ser mas aptas para ese habitat. 
+# Distribucion energias primordiales
+Teniendo el caos las reminiscencias y el Nero se podría decir que el Nero viene de [[Worlds/Firmamento/Notes/Kymarion]], el Caos del pajaro y las [[Worlds/Firmamento/Notes/Reminiscencias]] de los dos. Que ambos influyan en el mundo a traves de las Reminiscencias pero que cada una tenga su propia "energía". Lo que pasa que habría que cambiar el concepto de generación del universo ya que hablo de caos. La cosa sería entonces como justificar los cambios sin el caos aunque simplemente diciendo que es energía. Por otra parte sería interesante que nazcan dioses a partir de las Reminiscencias de ambos y que haya cierta interaccion en ese sentido. No se que se lleven mal, que tengan algun tipo de trait, objetivo y/o poder diferente dependiendo del origen, etc.

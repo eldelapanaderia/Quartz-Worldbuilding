@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-08-01T16:29:20.354+02:00","modified":"2025-11-27T00:58:46.123+01:00","published":"2025-11-27T00:58:46.123+01:00","tags":["arc"],"cssclasses":null,"dg-publish":true,"dg-permalink":"/W","test":"test","dg-pinned":"true","propiedad":"a ver si funciona","numero":1,"lista":["[[Ideas]]","[[Help]]"]}
+{"publish":true,"created":"2025-08-01T16:29:20.354+02:00","modified":"2025-12-10T17:35:51.656+01:00","published":"2025-12-10T17:35:51.656+01:00","tags":["arc"],"cssclasses":null,"dg-publish":true,"dg-permalink":"/W","test":"test","dg-pinned":"true","propiedad":"a ver si funciona","numero":1,"lista":["[[Ideas]]","[[Help]]"]}
 ---
 
 Em dash  — (diálogos)  `Alt + -`  (`Alt + 0151`)  `--`→`—`
